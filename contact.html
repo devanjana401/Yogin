@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yogiva</title>
+    <title>Yogin</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-secondary py-2">
+    <nav class="navbar navbar-expand-lg  py-2 custom-navbar">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-start" href="index.html">
                 <img src="./images/lotus-flower-icon.png" alt="Bootstrap" width="60" height="60"
                     style="border-radius: 50%;">
-                <span class="ms-2 fw-bold fs-1 mt-6">Yogiva</span>
+                <span class="ms-4 fw-bold fs-1 mt-8">Yogin</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -28,13 +29,175 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link active" href="classes.html">Classes</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="schedule.html">Schedule</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                 </ul>
-                <button type="button" class="btn1 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Now</button>
+                <button type="button" class="btn1 fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Book
+                    Now</button>
             </div>
         </div>
     </nav>
+    <br><br>
+    <div class="contact-form">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.0367377812945!2d75.7787664748123!3d11.258707788920916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65b2db706f6c3%3A0x88e33c099158e5f6!2sTECHOLAS%20TECHNOLOGIES%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1762016571290!5m2!1sen!2sin"
+            width="800" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="form-section">
+            <h2 style="color: rgb(53, 53, 158);">Get In Touch....</h2>
+            <p>or just reach out manually to <span style="color: rgb(53, 53, 158);">devanjanasasi@gmail.com</span></p>
+
+            <form id="contact-form" onsubmit="return validateForm(event)">
+                <label>Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name">
+                <span class="error" id="nameError"></span>
+
+                <label>Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email Address">
+                <span class="error" id="emailError"></span>
+
+                <label>Phone Number</label>
+                <input type="number" id="phone" name="phone" placeholder="Enter Your Phone Number">
+                <span class="error" id="phoneError"></span>
+
+                <label>Message</label>
+                <textarea id="message" name="message"
+                    placeholder="For More Details Enter Your Message To Us Here..."></textarea>
+                <span class="error" id="messageError"></span>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    // ✅ Initialize EmailJS
+    (function () {
+        emailjs.init("rfuFFYZhu0_J3KVCq");
+    })();
+
+    // ✅ Validation + Sending Combined
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Clear previous errors
+        document.getElementById("nameError").innerText = "";
+        document.getElementById("emailError").innerText = "";
+        document.getElementById("phoneError").innerText = "";
+        document.getElementById("messageError").innerText = "";
+
+        let isValid = true;
+
+        // Get field values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Validate each field
+        if (name === "") {
+            document.getElementById("nameError").innerText = "Name is required!";
+            isValid = false;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === "" || !emailPattern.test(email)) {
+            document.getElementById("emailError").innerText = "Enter a valid email!";
+            isValid = false;
+        }
+
+        const phonePattern = /^\d{10}$/;
+        if (!phonePattern.test(phone)) {
+            document.getElementById("phoneError").innerText = "Phone number must be 10 digits!";
+            isValid = false;
+        }
+
+        if (message === "") {
+            document.getElementById("messageError").innerText = "Message is required!";
+            isValid = false;
+        }
+        // ✅ Only send when all fields are valid
+        if (isValid) {
+            emailjs.sendForm("service_uye8cf2", "template_jitw5wm", this)
+                .then(function () {
+                    alert("✅ Message sent successfully!");
+                    document.getElementById("contact-form").reset();
+                })
+                .catch(function (error) {
+                    alert("❌ Failed to send message: " + JSON.stringify(error));
+                });
+        }
+    });
+</script>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="index.html">
+                    <img src="./images/lotus-flower-icon.png" alt="Bootstrap" width="80" height="80"
+                        style="border-radius: 50%;">
+                </a>
+                <h2 style="font-size: 36px;">Yogin</h2>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h5>About Us</h5>
+                    <ul>
+                        <li><a href="#">Our Vision</a></li>
+                        <li><a href="#">Our Mission</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Classes</a></li>
+                        <li><a href="#">Schedule</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><a href="#">+91 7034165867</a></li>
+                        <li><a href="#">devanjanasasi@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h6 style="font-size: 30px;">Social Media</h6>
+                    <div class="social-icons">
+                        <ul>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4 app-badges">
+                    <ul>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1200px-Download_on_the_App_Store_Badge.svg.png"
+                                alt="App Store"></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png"
+                                alt="Google Play"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center copyright">
+                    <p>© 2025 Yogin Yoga Academy. All rights reserved.</p>
+                    <p>Privacy Policy | Terms of Use | Cookie Preferences</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
