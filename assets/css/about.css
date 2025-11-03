@@ -1,0 +1,90 @@
+/* vision-mission card */
+.mission-vision-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.card {
+  width: 40%;
+  background: #d1caca;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  text-decoration:underline;
+}
+
+.card p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+@media (max-width: 768px) {
+  .mission-vision-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+/* trainer-section */
+.trainers-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+}
+.trainers-section h2 {
+  font-size: 36px;
+  color: #333;
+}
+.trainers-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 1000px;
+  margin: auto;
+}
+
+.trainer-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trainer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.trainer-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.trainer-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+}
