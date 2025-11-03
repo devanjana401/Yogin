@@ -38,6 +38,32 @@
 .btn1:hover {
     background: rgb(132, 130, 128);
 }
+body {
+    padding-top: 80px;
+}
+@media (max-width: 480px){
+    .offcanvas-body{
+        background: white;
+    }
+    .btn1{
+        display: block;
+        margin: 15px auto;
+        width: 60%;
+        background: rgb(227, 227, 223);
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .offcanvas-body{
+        background: white;
+    }
+    .btn1{
+        display: block;
+        margin: 15px auto;
+        width: 60%;
+        background: rgb(227, 227, 223);
+    }
+}
+
 
 /* footer */
 .footer {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/banner.css">
+    <link rel="icon" href="./assets/images/lotus-flower-icon.png">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -16,28 +17,35 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg  py-2 custom-navbar">
+    <nav class="navbar navbar-expand-lg py-2 custom-navbar fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-start" href="index.html">
-                <img src="./assets/images/lotus-flower-icon.png" alt="Bootstrap" width="60" height="60"
+                <img src="./assets/images/lotus-flower-icon.png" alt="Yogin" width="60" height="60"
                     style="border-radius: 50%;">
                 <span class="ms-4 fw-bold fs-1 mt-8">Yogin</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 custom-gap">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="classes.html">Classes</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="schedule.html">Schedule</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                </ul>
-                <button type="button" class="btn1 fs-5" id="bookBtn" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">Contact Us</button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 custom-gap" style="text-align: center;">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="classes.html">Classes</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="schedule.html">Schedule</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button type="button" class="btn1 fs-5" id="bookBtn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Contact Us
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -121,7 +129,7 @@
                             there live the blind texts.”
                         </p>
                         <div class="profile">
-                            <img src="./assets/images/testimonials/review1.png" alt="Gabby Smith">
+                            <img src="./assets/images/testimonials/review1.png" alt=" ">
                             <h4>Reviewer 1</h4>
                         </div>
                     </div>
@@ -132,7 +140,7 @@
                             throughout the journey.”
                         </p>
                         <div class="profile">
-                            <img src="./assets/images/testimonials/review2.png" alt="Floyd Weather">
+                            <img src="./assets/images/testimonials/review2.png" alt=" ">
                             <h4>Reviewer 2</h4>
                         </div>
                     </div>
@@ -143,7 +151,7 @@
                             the body, and awakens a deeper connection to the self.”
                         </p>
                         <div class="profile">
-                            <img src="./assets/images/testimonials/review3.jpeg" alt="Luna Grace">
+                            <img src="./assets/images/testimonials/review3.jpeg" alt=" ">
                             <h4>Reviewer 3</h4>
                         </div>
                     </div>
@@ -154,7 +162,7 @@
                             balanced and mindful life.”
                         </p>
                         <div class="profile">
-                            <img src="./assets/images/testimonials/review4.png" alt="Ava Lee">
+                            <img src="./assets/images/testimonials/review4.png" alt=" ">
                             <h4>Reviewer 4</h4>
                         </div>
                     </div>
@@ -165,7 +173,7 @@
                             the body, mind, and soul.”
                         </p>
                         <div class="profile">
-                            <img src="./assets/images/testimonials/review5.png" alt="Noah King">
+                            <img src="./assets/images/testimonials/review5.png" alt=" ">
                             <h4>Reviewer 5</h4>
                         </div>
                     </div>
@@ -176,7 +184,7 @@
                             bring peace and purpose to my everyday life.”
                         </p>
                         <div class="profile">
-                            <img src="./assets/images/testimonials/review6.jpeg" alt="Sophia Rose">
+                            <img src="./assets/images/testimonials/review6.jpeg" alt=" ">
                             <h4>Reviewer 6</h4>
                         </div>
                     </div>
@@ -203,8 +211,8 @@
                 <div class="col-md-3 col-sm-6 mb-4">
                     <h5>About Us</h5>
                     <ul>
-                        <li><a href="#">Our Vision</a></li>
-                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="about.html">Our Vision</a></li>
+                        <li><a href="about.html">Our Mission</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 mb-4">
