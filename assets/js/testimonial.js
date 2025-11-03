@@ -5,7 +5,7 @@ const total = document.querySelectorAll('.testimonial').length;
 
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
-        dots.forEach(d => d.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
         dot.classList.add('active');
         let move = index * (100 / visibleCount);
         testimonials.style.transform = `translateX(-${move}%)`;
