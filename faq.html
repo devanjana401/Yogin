@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yogin</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/faq.css">
     <link rel="icon" href="./assets/images/lotus-flower-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -34,7 +35,7 @@
                         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link active" href="classes.html">Classes</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="schedule.html">Schedule</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="faq.html">FAQs</a></li>
                         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                     </ul>
                     <button type="button" class="btn1 fs-5" id="bookBtn" data-bs-toggle="modal"
@@ -45,6 +46,86 @@
             </div>
         </div>
     </nav>
+
+    <section class="faq-section">
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq">
+            <div class="faq-question">
+                <h3>What are the available slots for Yoga Everyday?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We offer a range of convenient time slots throughout the day to match your lifestyle. You can join
+                    early morning sessions to start your day with energy or evening sessions to unwind after work. Each
+                    class runs for about 45-60 minutes. You can choose and switch slots as per your comfort.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">
+                <h3>Does the Yoga membership include Dance and Strength sessions?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, your membership gives you access to all our Dance and Strength sessions along with Yoga. Each
+                    category complements the other, helping you achieve a balanced fitness routine. You can attend any
+                    combination of sessions during your membership period. There's no extra cost involved for these
+                    additional classes.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">
+                <h3>Are the online yoga classes beginner-friendly?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Absolutely! Our classes are designed for all fitness levels, including complete beginners. Certified
+                    instructors guide you step-by-step with posture corrections and breathing techniques. You'll also
+                    get personalized feedback during live sessions. Gradually, you'll build strength, flexibility, and
+                    confidence at your own pace.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">
+                <h3>Does the Dance and Strength session include cardio exercises?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, both Dance and Strength sessions integrate cardio-focused routines to enhance stamina and
+                    endurance. The dance sessions feature fun, rhythmic movements that elevate your heart rate. Strength
+                    workouts mix in high-intensity circuits and bodyweight training. This combination ensures a complete
+                    full-body workout every week.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">
+                <h3>How will I cultivate new healthy habits?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Our structured program motivates you to develop consistency and discipline through daily sessions.
+                    You'll receive regular reminders, progress tracking, and wellness tips from our coaches. We focus
+                    not just on physical fitness but also on mindfulness and emotional balance. Over time, these small
+                    steps turn into lasting healthy habits.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">
+                <h3>How do I join the classes? Is the process straightforward?</h3>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Joining is quick and easy! Just sign up on our website, choose your preferred plan, and you'll get
+                    access instantly. You can select your slot and start attending classes from the very next day. Our
+                    support team is always available to assist you if you need any help during onboarding.</p>
+            </div>
+        </div>
+    </section>
 
 
     <button id="topBtn">↑</button>
@@ -66,7 +147,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="classes.html">Classes</a></li>
-                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -135,6 +216,16 @@
         document.getElementById("bookBtn").addEventListener("click", function () {
             window.location.href = "contact.html";
         });
+    </script>
+    <script>
+        const faqs = document.querySelectorAll(".faq");
+
+        faqs.forEach(faq => {
+            faq.addEventListener("click", () => {
+                faq.classList.toggle("active");
+            });
+        });
+
     </script>
 </body>
 
