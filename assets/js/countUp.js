@@ -27,3 +27,4 @@ const counters = document.querySelectorAll('.count');
                 started = true;
             }
         });
+        

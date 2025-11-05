@@ -72,7 +72,10 @@ body {
     padding: 20px 20px;
     margin-top: auto;
 }
-
+.footer a{
+    text-decoration: none;
+    color: white;
+}
 .footer h5 {
     color: white;
     font-weight: bold;

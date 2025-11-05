@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px; 
+}
 /* classes card */
 .card {
     position: relative;
@@ -55,79 +59,6 @@
         font-size: 13px;
     }
 }
-/* class schedule */
-.schedule-section {
-  text-align: center;
-  padding: 40px 120px;
-  background: #fafafa;
-}
-
-.schedule-section h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.class-schedule {
-  width: 100%;
-  background: white;;
-}
-
-.class-schedule th, .class-schedule td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: center;
-  font-size: 16px;
-}
-
-.class-schedule th {
-  background: #f0f0f0;
-  color: #222;
-}
-
-.class-schedule tr:nth-child(even) {
-  background: #f9f9f9;
-}
-@media (max-width: 480px) {
-  .schedule-section {
-    padding: 20px 15px;
-  }
-
-  .schedule-section h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .class-schedule {
-    font-size: 13px;
-    display: block;
-  }
-
-  .class-schedule th,
-  .class-schedule td {
-    padding: 8px;
-    font-size: 13px;
-  }
-
-  .class-schedule th {
-    font-size: 14px;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .schedule-section {
-    padding: 30px 40px;
-  }
-
-  .schedule-section h2 {
-    font-size: 24px;
-  }
-
-  .class-schedule th,
-  .class-schedule td {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
 /* class-details */
 .class-details {
   background-color: white;
@@ -146,6 +77,7 @@
 .class-details .card {
   border: none;
   border-radius: 10px;
+  height: 400px;
   overflow: hidden;
   background-color: rgb(247, 247, 247);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -202,30 +134,87 @@
   background-color: #ccbfbf;
 }
 @media (max-width: 480px) {
-  .class-details .card-body {
-    padding: 20px;
-  }
-
-  .class-details .card-text {
-    font-size: 14px;
-  }
-
-  .class-details img {
-    height: 220px !important;
+  .class-details .card {
+  text-align: justify;
+  height: 780px;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  .class-details .row.g-0 {
-    flex-direction: column !important;
+  .class-details .card {
+  text-align: justify;
+  height: 600px;
+  }
+}
+/* class schedule */
+.schedule-section {
+  text-align: center;
+  padding: 40px 120px;
+  background: #fafafa;
+}
+
+.schedule-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.class-schedule {
+  width: 100%;
+  background: white;;
+}
+
+.class-schedule th, .class-schedule td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.class-schedule th {
+  background: #f0f0f0;
+  color: #222;
+}
+
+.class-schedule tr:nth-child(even) {
+  background: #f9f9f9;
+}
+@media (max-width: 480px) {
+  .schedule-section {
+    padding: 20px 15px;
   }
 
-  .class-details .col-md-4,
-  .class-details .col-md-8 {
-    width: 100%;
+  .schedule-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
-  .class-details img {
-    border-radius: 10px 10px 0 0;
-    height: 250px !important;
+  .class-schedule {
+    font-size: 13px;
+    display: block;
+  }
+
+  .class-schedule th,
+  .class-schedule td {
+    padding: 2px;
+    font-size: 8px;
+  }
+
+  .class-schedule th {
+    font-size: 8px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .schedule-section {
+    padding: 30px 40px;
+  }
+
+  .schedule-section h2 {
+    font-size: 24px;
+  }
+
+  .class-schedule th,
+  .class-schedule td {
+    font-size: 14px;
+    padding: 10px;
   }
 }
