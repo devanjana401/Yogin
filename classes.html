@@ -57,8 +57,44 @@
         </ol>
     </section>
 
+    <div class="container my-5">
+        <h3 class="text-center mb-4">Filter Classes</h3>
+        <div class="row justify-content-center g-3">
+            <div class="col-md-3">
+                <select id="levelFilter" class="form-select">
+                    <option value="">Select Level</option>
+                    <option value="All Levels">All Levels</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Gentle / Prenatal">Gentle / Prenatal</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="durationFilter" class="form-select">
+                    <option value="">Select Duration</option>
+                    <option value="60 minutes">60 minutes</option>
+                    <option value="45 minutes">45 minutes</option>
+                    <option value="50 minutes">50 minutes</option>
+                    <option value="40 minutes">40 minutes</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="trainerFilter" class="form-select">
+                    <option value="">Select Trainer</option>
+                    <option value="Trainer 1">Trainer 1</option>
+                    <option value="Trainer 2">Trainer 2</option>
+                    <option value="Trainer 3">Trainer 3</option>
+                    <option value="Trainer 4">Trainer 4</option>
+                </select>
+            </div>
+            <div class="col-md-2 text-center">
+                <button id="searchBtn" class="btn btn-primary w-100">Search</button>
+            </div>
+        </div>
+    </div>
 
-<!-- class types -->
+    <!-- class types -->
     <div class="container my-5">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-12 heading-section classes-animate text-center">
@@ -131,7 +167,8 @@
         <br>
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-6">
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm" data-level="All Levels" data-duration="60 minutes"
+                    data-trainer="Trainer 1">
                     <div class="row g-0 align-items-center">
                         <div class="col-md-4">
                             <img src="./assets/images/classes/grouplesson.jpg" class="img-fluid rounded-start"
@@ -158,7 +195,8 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-6">
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm" data-level="Beginner" data-duration="45 minutes"
+                    data-trainer="Trainer 2">
                     <div class="row g-0 align-items-center flex-row-reverse">
                         <div class="col-md-4">
                             <img src="./assets/images/classes/beginner.jpg" class="img-fluid rounded-start"
@@ -187,7 +225,8 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-6">
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm" data-level="Gentle / Prenatal" data-duration="50 minutes"
+                    data-trainer="Trainer 3">
                     <div class="row g-0 align-items-center">
                         <div class="col-md-4">
                             <img src="./assets/images/classes/pregnent.jpg" class="img-fluid rounded-start"
@@ -213,7 +252,8 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-6">
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm" data-level="All Levels" data-duration="40 minutes"
+                    data-trainer="Trainer 4">
                     <div class="row g-0 align-items-center flex-row-reverse">
                         <div class="col-md-4">
                             <img src="./assets/images/classes/meditation.jpg" class="img-fluid rounded-start"
@@ -242,7 +282,8 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-6">
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm" data-level="Intermediate" data-duration="50 minutes"
+                    data-trainer="Trainer 2">
                     <div class="row g-0 align-items-center">
                         <div class="col-md-4">
                             <img src="./assets/images/classes/flexibility.jpg" class="img-fluid rounded-start"
@@ -271,7 +312,8 @@
 
             <!-- Card 6 -->
             <div class="col-md-6 col-lg-6">
-                <div class="card mb-4 shadow-sm">
+                <div class="card mb-4 shadow-sm" data-level="Advanced" data-duration="60 minutes"
+                    data-trainer="Trainer 1">
                     <div class="row g-0 align-items-center flex-row-reverse">
                         <div class="col-md-4">
                             <img src="./assets/images/classes/power.jpg" class="img-fluid rounded-start"
@@ -302,79 +344,79 @@
 
     <!-- schedule details -->
     <div class="schedule-section">
-    <h2>Weekly Class Schedule</h2>
-    <div>
-        <table class="class-schedule">
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Group Lessons</th>
-                    <th>Yoga for Beginners</th>
-                    <th>Yoga for Pregnant</th>
-                    <th>Meditation & Mindfulness</th>
-                    <th>Flexibility & Balance Yoga</th>
-                    <th>Power Yoga</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Monday</td>
-                    <td>6:30-7:30 AM (60 min) - Trainer1</td>
-                    <td>7:30-8:30 AM (60 min) - Trainer2</td>
-                    <td>------</td>
-                    <td>5:00-5:45 PM (45 min) - Trainer3</td>
-                    <td>6:00-7:00 PM (60 min) - Trainer4</td>
-                    <td>7:00-8:00 PM (60 min) - Trainer1</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>6:30-7:30 AM (60 min) - Trainer1</td>
-                    <td>7:30-8:30 AM (60 min) - Trainer2</td>
-                    <td>8:30-9:15 AM (45 min) - Trainer3</td>
-                    <td>5:00-5:45 PM (45 min) - Trainer3</td>
-                    <td>6:00-7:00 PM (60 min) - Trainer4</td>
-                    <td>7:00-8:00 PM (60 min) - Trainer1</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>6:30-7:30 AM (60 min) - Trainer1</td>
-                    <td>7:30-8:30 AM (60 min) - Trainer2</td>
-                    <td>------</td>
-                    <td>5:00-5:45 PM (45 min) - Trainer3</td>
-                    <td>6:00-7:00 PM (60 min) - Trainer4</td>
-                    <td>7:00-8:00 PM (60 min) - Trainer1</td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td>6:30-7:30 AM (60 min) - Trainer1</td>
-                    <td>7:30-8:30 AM (60 min) - Trainer2</td>
-                    <td>8:30-9:15 AM (45 min) - Trainer3</td>
-                    <td>5:00-5:45 PM (45 min) - Trainer3</td>
-                    <td>6:00-7:00 PM (60 min) - Trainer4</td>
-                    <td>7:00-8:00 PM (60 min) - Trainer1</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>6:30-7:30 AM (60 min) - Trainer1</td>
-                    <td>7:30-8:30 AM (60 min) - Trainer2</td>
-                    <td>------</td>
-                    <td>5:00-5:45 PM (45 min) - Trainer3</td>
-                    <td>6:00-7:00 PM (60 min) - Trainer4</td>
-                    <td>7:00-8:00 PM (60 min) - Trainer1</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>6:30-7:30 AM (60 min) - Trainer1</td>
-                    <td>7:30-8:30 AM (60 min) - Trainer2</td>
-                    <td>8:30-9:15 AM (45 min) - Trainer3</td>
-                    <td>5:00-5:45 PM (45 min) - Trainer3</td>
-                    <td>6:00-7:00 PM (60 min) - Trainer4</td>
-                    <td>------</td>
-                </tr>
-            </tbody>
-        </table>
+        <h2>Weekly Class Schedule</h2>
+        <div>
+            <table class="class-schedule">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Group Lessons</th>
+                        <th>Yoga for Beginners</th>
+                        <th>Yoga for Pregnant</th>
+                        <th>Meditation & Mindfulness</th>
+                        <th>Flexibility & Balance Yoga</th>
+                        <th>Power Yoga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>6:30-7:30 AM (60 min) - Trainer1</td>
+                        <td>7:30-8:30 AM (60 min) - Trainer2</td>
+                        <td>------</td>
+                        <td>5:00-5:45 PM (45 min) - Trainer3</td>
+                        <td>6:00-7:00 PM (60 min) - Trainer4</td>
+                        <td>7:00-8:00 PM (60 min) - Trainer1</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>6:30-7:30 AM (60 min) - Trainer1</td>
+                        <td>7:30-8:30 AM (60 min) - Trainer2</td>
+                        <td>8:30-9:15 AM (45 min) - Trainer3</td>
+                        <td>5:00-5:45 PM (45 min) - Trainer3</td>
+                        <td>6:00-7:00 PM (60 min) - Trainer4</td>
+                        <td>7:00-8:00 PM (60 min) - Trainer1</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>6:30-7:30 AM (60 min) - Trainer1</td>
+                        <td>7:30-8:30 AM (60 min) - Trainer2</td>
+                        <td>------</td>
+                        <td>5:00-5:45 PM (45 min) - Trainer3</td>
+                        <td>6:00-7:00 PM (60 min) - Trainer4</td>
+                        <td>7:00-8:00 PM (60 min) - Trainer1</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>6:30-7:30 AM (60 min) - Trainer1</td>
+                        <td>7:30-8:30 AM (60 min) - Trainer2</td>
+                        <td>8:30-9:15 AM (45 min) - Trainer3</td>
+                        <td>5:00-5:45 PM (45 min) - Trainer3</td>
+                        <td>6:00-7:00 PM (60 min) - Trainer4</td>
+                        <td>7:00-8:00 PM (60 min) - Trainer1</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>6:30-7:30 AM (60 min) - Trainer1</td>
+                        <td>7:30-8:30 AM (60 min) - Trainer2</td>
+                        <td>------</td>
+                        <td>5:00-5:45 PM (45 min) - Trainer3</td>
+                        <td>6:00-7:00 PM (60 min) - Trainer4</td>
+                        <td>7:00-8:00 PM (60 min) - Trainer1</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>6:30-7:30 AM (60 min) - Trainer1</td>
+                        <td>7:30-8:30 AM (60 min) - Trainer2</td>
+                        <td>8:30-9:15 AM (45 min) - Trainer3</td>
+                        <td>5:00-5:45 PM (45 min) - Trainer3</td>
+                        <td>6:00-7:00 PM (60 min) - Trainer4</td>
+                        <td>------</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 
 
     <div class="container my-5">
@@ -496,6 +538,36 @@
     <script>
         document.getElementById("bookBtn").addEventListener("click", function () {
             window.location.href = "contact.html";
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("searchBtn").addEventListener("click", () => {
+                const level = document.getElementById("levelFilter").value.trim();
+                const duration = document.getElementById("durationFilter").value.trim();
+                const trainer = document.getElementById("trainerFilter").value.trim();
+
+                const allCards = Array.from(document.querySelectorAll(".class-details .card"));
+                const matchedCards = allCards.filter(card => {
+                    const cardLevel = card.dataset.level;
+                    const cardDuration = card.dataset.duration;
+                    const cardTrainer = card.dataset.trainer;
+
+                    const matchLevel = !level || cardLevel === level;
+                    const matchDuration = !duration || cardDuration === duration;
+                    const matchTrainer = !trainer || cardTrainer === trainer;
+
+                    return matchLevel && matchDuration && matchTrainer;
+                });
+                allCards.forEach(card => {
+                    card.style.display = matchedCards.includes(card) ? "block" : "none";
+                });
+                if (matchedCards.length > 0) {
+                    matchedCards[0].scrollIntoView({ behavior: "smooth", block: "center" });
+                } else {
+                    alert("No classes found!");
+                }
+            });
         });
     </script>
 </body>
