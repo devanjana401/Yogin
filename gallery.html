@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yogin</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/classes.css">
     <link rel="icon" href="./assets/images/lotus-flower-icon.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -48,63 +50,36 @@
         </div>
     </nav>
 
-    <section class="breadcrumb-section">
-        <img src="./assets/images/about/mainabout.jpg" alt="" >
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html" style="color: white;">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page" style="color: white;">About</li>
-        </ol>
-    </section>
-
-    <div class="about">
-        <h2>About Us</h2>
-        <p>Welcome to Yogin Yoga Academy, a peaceful space where you can relax, breathe, and find balance in your life. Our academy was created with the goal of helping people discover the true power of yoga for both body and mind.At Yogin, we believe yoga is for everyone—no matter your age, strength, or experience. Our classes are designed to suit beginners as well as advanced learners. Each session focuses on improving flexibility, strength, and inner calm.Our friendly and skilled instructors guide you with care, making sure you feel comfortable and confident in every pose. Along with yoga, we also include meditation and breathing techniques to help reduce stress and bring mental peace.We aim to create a community where people can grow together, support each other, and lead a healthy lifestyle. Whether your goal is fitness, relaxation, or self-discovery, Yogin Yoga Academy is here to help you every step of the way.Join us and start your journey towards a happier, healthier, and more mindful life.</p>
-    </div>
-
-    <section class="mission-vision-section">
-        <div class="card">
-            <h2>Vision</h2>
-            <p>
-                Our vision is to build a global community rooted in wellness, compassion, and self-awareness.
-                We aspire to make yoga a daily lifestyle that fosters holistic health and sustainable living.
-                Through continuous learning and mindful practices, we envision a world where everyone thrives
-                in body, mind, and spirit.
-            </p>
-        </div>
-        <div class="card">
-            <h2>Mission</h2>
-            <p>
-                Our mission is to inspire balance, strength, and inner peace through the ancient practice of yoga.
-                We aim to create a welcoming space where individuals of all levels can grow physically, mentally,
-                and spiritually. By nurturing mindfulness and harmony, we strive to help every person connect
-                deeply with themselves and the world around them.
-            </p>
-        </div>
-    </section>
-
-    <div class="trainers-section">
-        <h2>Our Trainers</h2>
-        <div class="trainers-container">
-            <div class="trainer-card">
-                <img src="./assets/images/testimonials/review1.png" alt="Trainer 1">
-                <h3>Trainer 1</h3>
-            </div>
-
-            <div class="trainer-card">
-                <img src="./assets/images/testimonials/review2.png" alt="Trainer 2">
-                <h3>Trainer 2</h3>
-            </div>
-
-            <div class="trainer-card">
-                <img src="./assets/images/testimonials/review3.jpeg" alt="Trainer 3">
-                <h3>Trainer 3</h3>
-            </div>
-
-            <div class="trainer-card">
-                <img src="./assets/images/testimonials/review4.png" alt="Trainer 4">
-                <h3>Trainer 4</h3>
+    <div class="container my-5">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-12 heading-section classes-animate text-center">
+                <h3 class="subheading">Gallery</h3>
+                <h2 class="mb-1">See the latest photos</h2>
             </div>
         </div>
+        <div class="row g-2">
+            <div class="col-6 col-md-3">
+                <div class="card h-100 border-0 text-white position-relative">
+                    <img src="./assets/images/classes/gallery1.jpg" class="card-img" alt="">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card h-100 border-0 text-white position-relative">
+                    <img src="./assets/images/classes/gallery2.jpg" class="card-img" alt="">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card h-100 border-0 text-white position-relative">
+                    <img src="./assets/images/classes/gallery3.jpg" class="card-img" alt="">
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card h-100 border-0 text-white position-relative">
+                    <img src="./assets/images/classes/gallery4.jpg" class="card-img" alt="">
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/classes.js"></script>
     </div>
 
     <button id="topBtn">↑</button>
@@ -196,6 +171,7 @@
         document.getElementById("bookBtn").addEventListener("click", function () {
             window.location.href = "contact.html";
         });
+    </script>
     </script>
 </body>
 
