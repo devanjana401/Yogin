@@ -1,0 +1,12 @@
+{
+  "gallery": [
+    { "src": "./assets/images/classes/gallery1.jpg", "alt": "Yoga Pose 1" },
+    { "src": "./assets/images/classes/gallery2.jpg", "alt": "Yoga Pose 2" },
+    { "src": "./assets/images/classes/gallery3.jpg", "alt": "Yoga Pose 3" },
+    { "src": "./assets/images/classes/gallery4.jpg", "alt": "Yoga Pose 4" },
+    { "src": "./assets/images/classes/gallery1.jpg", "alt": "Yoga Pose 1" },
+    { "src": "./assets/images/classes/gallery2.jpg", "alt": "Yoga Pose 2" },
+    { "src": "./assets/images/classes/gallery3.jpg", "alt": "Yoga Pose 3" },
+    { "src": "./assets/images/classes/gallery4.jpg", "alt": "Yoga Pose 4" }
+  ]
+}
