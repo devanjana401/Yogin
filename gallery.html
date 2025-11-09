@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yogin</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/classes.css">
     <link rel="icon" href="./assets/images/lotus-flower-icon.png">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -156,10 +155,9 @@
     <script>
     async function loadGallery() {
       try {
-        const response = await fetch('./gallery.json'); // path to your JSON file
+        const response = await fetch('./gallery.json'); 
         const data = await response.json();
         const galleryRow = document.querySelector('.row.g-2');
-        galleryRow.innerHTML = ''; // Clear old content
 
         data.gallery.forEach(item => {
           const col = document.createElement('div');
