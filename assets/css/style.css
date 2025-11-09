@@ -1,3 +1,9 @@
+:root {
+  --navbar-bg: rgb(227, 227, 223);
+  --btn-hover: rgb(132, 130, 128);
+  --footer-bg: #2a2f2d;
+}
+
 * {
     box-sizing: border-box;
     font-family: SoDoSans_Bold, Helvetica, sans-serif;
@@ -6,7 +12,7 @@
 /* navbar */
 .custom-navbar {
     height: 80px;
-    background: rgb(227, 227, 223);
+    background: var(--navbar-bg);
 }
 
 .navbar-brand {
@@ -33,13 +39,47 @@
     border-radius: 16px;
     margin-right: 60px;
     height: 40px;
+    margin-top: 8px;
 }
 
 .btn1:hover {
-    background: rgb(132, 130, 128);
+    background: var(--btn-hover);
 }
 body {
     padding-top: 80px;
+}
+/* search-section */
+.search-form {
+  display: flex;
+  flex-direction: row;
+  margin: 0 15px;
+}
+
+.search-input {
+  width: 180px;
+  border-radius: 20px;
+  border: 1px solid var(--btn-hover);
+  background: transparent;
+  padding: 6px 12px;
+  font-size: 16px;
+}
+
+.search-btn {
+  background: var(--navbar-bg);
+  border: 1px solid var(--btn-hover);
+  border-radius: 50%;
+  width: 46px;
+  height: 40px;
+  margin-left: 14px;
+}
+
+.search-btn:hover {
+  background: var(--btn-hover);
+  color: white;
+}
+
+.search-btn i {
+  font-size: 18px;
 }
 @media (max-width: 480px){
     .offcanvas-body{
@@ -49,7 +89,7 @@ body {
         display: block;
         margin: 15px auto;
         width: 60%;
-        background: rgb(227, 227, 223);
+        background: var(--navbar-bg);
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -60,14 +100,12 @@ body {
         display: block;
         margin: 15px auto;
         width: 60%;
-        background: rgb(227, 227, 223);
+        background: var(--navbar-bg);
     }
 }
-
-
 /* footer */
 .footer {
-    background-color: #2a2f2d;
+    background-color: var(--footer-bg);
     color: #fff;
     padding: 20px 20px;
     margin-top: auto;
@@ -126,115 +164,6 @@ body {
 .app-badges img {
     height: 30px;
     margin-bottom: 2px;
-}
-
-/* form */
-.contact-form {
-    display: flex;
-    height: 800px;
-}
-
-iframe {
-    width: 50%;
-    padding: 40px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-section {
-    width: 50%;
-    padding: 40px;
-}
-
-#contact-form label {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#contact-form input,
-textarea {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-}
-
-#contact-form textarea {
-    height: 100px;
-}
-
-#contact-form button {
-    width: 80%;
-    background: #1a1a80;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#contact-form button:hover {
-    background: #2d2dbc;
-}
-
-.error {
-    color: red;
-    font-size: 14px;
-}
-@media (max-width: 480px) {
-    iframe {
-        width: 90%;
-        height: 90%;
-        padding: 10px;
-    }
-
-    .contact-form {
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-    }
-
-    .form-section {
-        width: 90%;
-        padding: 20px;
-    }
-
-    #contact-form input,
-    #contact-form textarea,
-    #contact-form button {
-        width: 100%;
-    }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-    iframe {
-        width: 80%;
-        height: 80%;
-        padding: 20px;
-    }
-
-    .contact-form {
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-    }
-
-    .form-section {
-        width: 80%;
-        padding: 30px;
-    }
-
-    #contact-form input,
-    #contact-form textarea,
-    #contact-form button {
-        width: 100%;
-    }
 }
 /* breadcrumb */
 .breadcrumb-section {
