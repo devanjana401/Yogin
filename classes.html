@@ -41,7 +41,7 @@
                         <li class="nav-item"><a class="nav-link active" href="faq.html">FAQs</a></li>
                         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                     </ul>
-                    <form class="search-form d-flex align-items-center ms-3" role="search">
+                    <form class="search-form d-flex align-items-center ms-3" role="search" id="searchForm">
                         <input class="search-input form-control" type="search" placeholder="Search" aria-label="Search">
                         <button class="search-btn" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -165,7 +165,6 @@
                 </div>
             </div>
         </div>
-        <script src="./assets/js/classes.js"></script>
     </div>
     <br>
     <!-- class-details -->
@@ -346,7 +345,6 @@
                 </div>
             </div>
         </div>
-        <script src="./assets/js/classes.js"></script>
     </div>
 
     <!-- schedule details -->
@@ -515,36 +513,8 @@
             window.location.href = "contact.html";
         });
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById("searchBtn").addEventListener("click", () => {
-                const level = document.getElementById("levelFilter").value.trim();
-                const duration = document.getElementById("durationFilter").value.trim();
-                const trainer = document.getElementById("trainerFilter").value.trim();
-
-                const allCards = Array.from(document.querySelectorAll(".class-details .card"));
-                const matchedCards = allCards.filter(card => {
-                    const cardLevel = card.dataset.level;
-                    const cardDuration = card.dataset.duration;
-                    const cardTrainer = card.dataset.trainer;
-
-                    const matchLevel = !level || cardLevel === level;
-                    const matchDuration = !duration || cardDuration === duration;
-                    const matchTrainer = !trainer || cardTrainer === trainer;
-
-                    return matchLevel && matchDuration && matchTrainer;
-                });
-                allCards.forEach(card => {
-                    card.style.display = matchedCards.includes(card) ? "block" : "none";
-                });
-                if (matchedCards.length > 0) {
-                    matchedCards[0].scrollIntoView({ behavior: "smooth", block: "center" });
-                } else {
-                    alert("No classes found!");
-                }
-            });
-        });
-    </script>
+    <script src="./assets/js/classes.js"></script>
+    <script src="./assets/js/search.js"></script>
 </body>
 
 </html>
