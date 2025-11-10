@@ -1,4 +1,9 @@
-
+// signin page redirect
+document.getElementById("signBtn").addEventListener("click", function () {
+            window.location.href = "sign-in.html";
+        });
+        
+// top-button
 let btn = document.getElementById("topBtn");
 
 window.onscroll = function() {

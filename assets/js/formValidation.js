@@ -1,13 +1,13 @@
-// Initialize EmailJS
+// initialize emailjs
 (function () {
     emailjs.init("rfuFFYZhu0_J3KVCq");
 })();
 
-// Validation + emailjs
+// validation + emailjs
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Clear previous errors
+    // Clear errors
     document.getElementById("nameError").innerText = "";
     document.getElementById("emailError").innerText = "";
     document.getElementById("phoneError").innerText = "";
@@ -15,13 +15,13 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 
     let isValid = true;
 
-    // Get field values
+    // get field values
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    // Validate each field
+    // validate each field
     if (name === "") {
         document.getElementById("nameError").innerText = "Name is required!";
         isValid = false;
@@ -43,7 +43,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
         document.getElementById("messageError").innerText = "Message is required!";
         isValid = false;
     }
-    //Only send when all fields are valid
+    //only send when all fields are valid
     if (isValid) {
         emailjs.sendForm("service_uye8cf2", "template_jitw5wm", this)
             .then(function () {
