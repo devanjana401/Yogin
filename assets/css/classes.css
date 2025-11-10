@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 200px; 
 }
+
 /* classes card */
 .card {
     position: relative;
@@ -59,6 +60,7 @@ html {
         font-size: 13px;
     }
 }
+
 /* class-details */
 .class-details {
   background-color: white;
@@ -145,6 +147,7 @@ html {
   height: 600px;
   }
 }
+
 /* class schedule */
 .schedule-section {
   text-align: center;

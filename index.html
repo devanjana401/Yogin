@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg py-2 custom-navbar fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-start" href="index.html">
@@ -49,15 +50,15 @@
                         </button>
                     </form>
 
-
                     <button type="button" class="btn1 fs-5" id="bookBtn" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
-                        Contact Us
+                        Sign In
                     </button>
                 </div>
             </div>
         </div>
     </nav>
+
     <!-- main banner -->
     <div class="main-banner">
         <img src="./assets/images/Home/main-banner.jpg" alt="Yoga Banner">
@@ -67,6 +68,7 @@
             <a href="https://wa.me/917034165867" class="banner-btn">Join Now</a>
         </div>
     </div><br><br>
+
     <!-- banner 2 -->
     <div class="banner2">
         <img src="./assets/images/Home/banner2.jpg" alt="Yoga Banner">
@@ -88,6 +90,7 @@
         </div>
     </div>
 
+    <!-- events -->
     <div class="events">
         <div class="event-text">
             <h2>Special Events, Workshops &amp; Training</h2>
@@ -104,6 +107,7 @@
             <video src="./assets/videos/video4.mp4" controls></video>
         </div>
     </div>
+
     <!-- success-metrics -->
     <div class="success-metrics">
         <h2>Our Success Metrics</h2>
@@ -126,6 +130,7 @@
             </div>
         </div>
     </div>
+
     <!-- success-stories -->
     <section class="stories">
         <div class="container">
@@ -210,16 +215,17 @@
         </div>
     </section>
 
-
     <!-- wtsp-button -->
     <button class="wtsp-btn">
         <a href="https://wa.me/917034165867" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
     </button>
+
     <!-- top-button -->
     <button id="topBtn">↑</button>
 
+    <!-- footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -302,17 +308,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script>
-        document.getElementById("bookBtn").addEventListener("click", function () {
-            window.location.href = "contact.html";
-        });
-    </script>
+    
     <!-- custom js -->
     <script src="./assets/js/videos.js"></script>
     <script src="./assets/js/countUp.js"></script>
     <script src="./assets/js/testimonial.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/search.js"></script>
+
+    <!-- <script>
+        document.getElementById("bookBtn").addEventListener("click", function () {
+            window.location.href = "contact.html";
+        });
+    </script> -->
 </body>
 
 </html>

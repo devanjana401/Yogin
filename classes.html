@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg py-2 custom-navbar fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-start" href="index.html">
@@ -47,15 +48,17 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
+                    
                     <button type="button" class="btn1 fs-5" id="bookBtn" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
-                        Contact Us
+                        Sign In
                     </button>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- breadcrumb -->
     <section class="breadcrumb-section">
         <img src="./assets/images/classes/mainclass.jpg" alt="">
         <ol class="breadcrumb">
@@ -64,6 +67,7 @@
         </ol>
     </section>
 
+    <!-- class-filter -->
     <div class="container my-5">
         <h3 class="text-center mb-4">Filter Classes</h3>
         <div class="row justify-content-center g-3">
@@ -96,7 +100,7 @@
                 </select>
             </div>
             <div class="col-md-2 text-center">
-                <button id="searchBtn" class="btn btn-primary w-100">Search</button>
+                <button id="searchBtn" class="btn  w-100" style="background-color: rgb(132, 130, 128);">Search</button>
             </div>
         </div>
     </div>
@@ -167,6 +171,7 @@
         </div>
     </div>
     <br>
+
     <!-- class-details -->
     <div class="container my-5 class-details">
         <h2>Class Details</h2>
@@ -315,8 +320,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Card 6 -->
             <div class="col-md-6 col-lg-6">
                 <div class="card mb-4 shadow-sm" data-level="Advanced" data-duration="60 minutes"
                     data-trainer="Trainer 1">
@@ -422,12 +425,14 @@
             </table>
         </div>
     </div>
+
     <!-- wtsp-button -->
     <button class="wtsp-btn">
         <a href="https://wa.me/917034165867" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
     </button>
+
     <!-- top-button -->
     <button id="topBtn">↑</button>
 
@@ -513,11 +518,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script>
-        document.getElementById("bookBtn").addEventListener("click", function () {
-            window.location.href = "contact.html";
-        });
-    </script>
+    
+    <!-- custom js -->
     <script src="./assets/js/classes.js"></script>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/main.js"></script>

@@ -1,0 +1,85 @@
+/* signIn-form */
+.signIn-form {
+    padding: 40px 40px;
+    height: 460px;
+}
+
+.signInform-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.signInform-section img {
+    width: 20%;
+}
+
+.signInform-section form {
+    width: 26%;
+}
+
+.signIn-form label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.signIn-form input {
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.signIn-form button {
+    background-color: rgb(167, 167, 164);
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.signIn-form button:hover {
+    background-color: rgb(132, 130, 128);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .signIn-form {
+        padding: 40px 40px;
+        height: 600px;
+    }
+
+    .signInform-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .signInform-section img {
+        width: 60%;
+    }
+
+    .signInform-section form {
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .signInform-section img {
+        width: 30%;
+    }
+
+    .signInform-section form {
+        width: 60%;
+    }
+}

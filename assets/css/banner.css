@@ -1,3 +1,4 @@
+/* main-banner */
 .main-banner {
   position: relative;
   width: 100%;
@@ -72,6 +73,7 @@
   }
 }
 
+/* banner2 */
 .banner2 {
   position: relative;
   width: 100%;
@@ -171,4 +173,4 @@
   .banner2 .banner2-text .yoga-benefits li i {
     font-size: 18px;
   }
-}/*# sourceMappingURL=banner.css.map */
+}

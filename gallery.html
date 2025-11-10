@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg py-2 custom-navbar fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-start" href="index.html">
@@ -46,15 +47,17 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
+
                     <button type="button" class="btn1 fs-5" id="bookBtn" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
-                        Contact Us
+                        Sign In
                     </button>
                 </div>
             </div>
         </div>
     </nav>
-
+     
+    <!-- gallery -->
     <div class="container my-5">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-12 heading-section classes-animate text-center">
@@ -62,20 +65,22 @@
         <h2 class="mb-1">See the Latest Photos</h2>
       </div>
     </div>
-
     <div class="row g-2">
       <!-- Images will be loaded here -->
     </div>
-  </div>
+    </div>
+
     <!-- wtsp-button -->
     <button class="wtsp-btn">
         <a href="https://wa.me/917034165867" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
     </button>
+
     <!-- top-button -->
     <button id="topBtn">↑</button>
 
+    <!-- footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -158,11 +163,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script>
-        document.getElementById("bookBtn").addEventListener("click", function () {
-            window.location.href = "contact.html";
-        });
-    </script>
+    
+    <!-- custom js -->
     <script src="./assets/js/json.js"></script>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/main.js"></script>
