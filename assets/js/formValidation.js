@@ -22,8 +22,9 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     const message = document.getElementById("message").value.trim();
 
     // validate each field
-    if (name === "") {
-        document.getElementById("nameError").innerText = "Name is required!";
+    const namePattern = /^[a-zA-Z\s'-]+$/;
+    if (name === "" || !namePattern.test(name)) {
+        document.getElementById("nameError").innerText = "Enter a valid name (letters only)!";
         isValid = false;
     }
 
