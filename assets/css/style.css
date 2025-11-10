@@ -188,15 +188,37 @@ body {
         height: 200px;
     }
 }
+.wtsp-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    height: 42px;
+    width: 42px;
+    border-radius: 60%;
+    border: none;
+    background-color: rgb(76, 73, 73);
+    color: white;
+}
+.wtsp-btn:hover {
+    transform: scale(1.1);
+}
+.wtsp-btn a {
+    color: white;
+    text-decoration: none;
+}
+/* top-button */
 #topBtn {
   position: fixed;
   bottom: 30px;
   right: 30px;
   font-size: 20px;
-  height: 40px;
-  width: 40px;
+  height: 42px;
+  width: 42px;
   border-radius: 60%;
   background-color: rgb(76, 73, 73);
   color: white;
   display: none;
+}
+#topBtn:hover{
+    transform: scale(1.1);
 }
