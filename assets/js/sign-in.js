@@ -34,7 +34,7 @@ function validatesignForm(event) {
         isValid = false;
     }
 
-    //if valid, save data & redirect to home
+    //if valid, save data to localStorage & redirect to home page
     if (isValid) {
         localStorage.setItem("userName", name);
         localStorage.setItem("userEmail", email);
@@ -46,7 +46,7 @@ function validatesignForm(event) {
     }
 }
 
-//home page changes are...
+//home page changes are,
 document.addEventListener("DOMContentLoaded", function () {
     const signBtn = document.getElementById("signBtn");
     if (!signBtn) return;

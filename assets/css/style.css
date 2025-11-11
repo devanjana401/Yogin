@@ -8,6 +8,16 @@
     box-sizing: border-box;
     font-family: SoDoSans_Bold, Helvetica, sans-serif;
 }
+@font-face {
+  font-family: 'Story Script';
+  src: url('../fonts/story-script-regular.ttf') format('truetype');
+}
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* navbar */
 .custom-navbar {
