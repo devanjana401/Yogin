@@ -46,6 +46,11 @@ function validatesignForm(event) {
     }
 }
 
+// clear localStorage every time page loads or it shows the username/use sessionstorage
+window.addEventListener("load", function () {
+  localStorage.clear();
+});
+
 //home page changes are,
 document.addEventListener("DOMContentLoaded", function () {
     const signBtn = document.getElementById("signBtn");
