@@ -231,31 +231,6 @@ body {
     margin-bottom: 2px;
 }
 
-/* breadcrumb */
-/* .breadcrumb-section {
-    position: relative;
-    text-align: center;
-}
-
-.breadcrumb-section img {
-    width: 100%;
-    height: 400px;
-}
-
-.breadcrumb-section .breadcrumb {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-@media (max-width: 480px) {
-    .breadcrumb-section img {
-        width: 100%;
-        height: 200px;
-    }
-} */
-
 /* bg-section */
 
 .bg-section{
