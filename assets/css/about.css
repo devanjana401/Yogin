@@ -3,7 +3,7 @@
   width: 80%;
   margin: 60px auto;
   background: #f8f8f8;
-  padding: 40px 50px;
+  padding: 30px 40px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: justify;
@@ -20,7 +20,6 @@
   margin-bottom: 20px;
   color: #333;
   letter-spacing: 1px;
-  text-decoration: underline;
 }
 
 .about p {
@@ -67,7 +66,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 60px 20px;
+  padding: 30px 16px;
   background-color: white;
 }
 
@@ -75,7 +74,7 @@
   width: 40%;
   background: #d1caca;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 40px;
+  padding: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -89,7 +88,6 @@
   color: #333;
   margin-bottom: 15px;
   text-align: center;
-  text-decoration:underline;
   letter-spacing: 1px;
 }
 
@@ -103,13 +101,13 @@
   .mission-vision-section {
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
+    padding: 30px 10px;
     gap: 20px;
   }
 
   .card {
     width: 95%;
-    padding: 25px;
+    padding: 30px;
   }
 
   .card h2 {
@@ -123,14 +121,13 @@
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .mission-vision-section {
-    flex-direction: column;
     align-items: center;
-    padding: 50px 30px;
-    gap: 25px;
+    padding: 20px 40px;
+    gap: 22px;
   }
   .card {
     width: 80%;
-    padding: 35px;
+    padding: 30px;
   }
   .card h2 {
     font-size: 26px;
@@ -144,13 +141,12 @@
 /* trainer-section */
 .trainers-section {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
   background-color: white;
 }
 .trainers-section h2 {
   font-size: 30px;
   color: #333;
-  text-decoration: underline;
   margin-bottom: 40px;
 }
 .trainers-container {
@@ -158,7 +154,7 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  width: 1000px;
+  width: 82%;
   margin: auto;
 }
 
@@ -198,14 +194,14 @@
   }
 
   .trainers-container {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     gap: 20px;
   }
 
   .trainer-card {
-    width: 85%;
+    width: 45%;
     padding: 15px;
   }
 
@@ -225,12 +221,13 @@
 
   .trainers-container {
     flex-wrap: wrap;
+    justify-content: center;
     width: 90%;
     gap: 25px;
   }
 
   .trainer-card {
-    width: 45%;
+    width: 30%;
     padding: 18px;
   }
 

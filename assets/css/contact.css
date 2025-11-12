@@ -1,6 +1,7 @@
 /* contact-form */
 .contact-form {
     display: flex;
+    padding-left: 120px;
     height: 800px;
 }
 
@@ -52,6 +53,9 @@ textarea {
     font-size: 14px;
 }
 @media (max-width: 480px) {
+    .contact-form {
+        padding-left: 0px;
+    }
     iframe {
         width: 90%;
         height: 90%;
@@ -76,6 +80,9 @@ textarea {
     }
 }
 @media (min-width: 481px) and (max-width: 768px) {
+    .contact-form {
+        padding-left: 0px;
+    }
     iframe {
         width: 80%;
         height: 80%;

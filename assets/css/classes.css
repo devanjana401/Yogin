@@ -64,7 +64,7 @@ html {
 /* class-details */
 .class-details {
   background-color: white;
-  padding: 40px 20px;
+  padding: 10px 20px;
 }
 
 .class-details h2 {
@@ -73,7 +73,6 @@ html {
   letter-spacing: 1px;
   font-size: 28px;
   text-align: center;
-  text-decoration: underline;
 }
 
 .class-details .card {

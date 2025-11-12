@@ -14,7 +14,7 @@ const counters = document.querySelectorAll('.count');
                         count = target;
                         clearInterval(updateCount);
                     }
-                    counter.textContent = target === 4.8 ? count.toFixed(1) : Math.floor(count);
+                    counter.textContent = target === 4.5 ? count.toFixed(1) : Math.floor(count);
                 }, 50);
             });
         }

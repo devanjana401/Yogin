@@ -1,7 +1,7 @@
 /* events */
 .events {
   width: 100%;
-  padding: 60px 0;
+  padding: 22px 0;
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -69,7 +69,7 @@
 /* success metrics */
 .success-metrics {
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px 20px;
   color: #333;
 }
 
@@ -91,8 +91,8 @@
   background: #f5f5f5;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  height:260px;
-  width: 300px;
+  height:240px;
+  width: 260px;
   padding: 30px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
@@ -118,6 +118,11 @@
   color: #666;
   font-weight: 500;
 }
+.count::after {
+  content: "+";
+  margin-left: 2px;
+  color: #000;
+}
 
 @media (max-width: 480px) {
   .metric-box {
@@ -136,7 +141,7 @@
 /* success stories */
 .stories {
   text-align: center;
-  padding: 60px 0;
+  padding: 20px 0;
   background: white;
 }
 

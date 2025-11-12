@@ -2,7 +2,7 @@ async function loadGallery() {
       try {
         const response = await fetch('./gallery.json'); 
         const data = await response.json();
-        const galleryRow = document.querySelector('.row.g-2');
+        const galleryRow = document.querySelector('.galleryJson');
 
         data.gallery.forEach(item => {
           const col = document.createElement('div');
