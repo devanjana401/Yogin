@@ -47,9 +47,9 @@ function validatesignForm(event) {
 }
 
 // clear localStorage every time page loads or it shows the username/use sessionstorage
-window.addEventListener("load", function () {
-  localStorage.clear();
-});
+// window.addEventListener("load", function () {
+//   localStorage.clear();
+// });
 
 //home page changes are,
 document.addEventListener("DOMContentLoaded", function () {
@@ -67,7 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const welcomeMsg = document.createElement("span");
         welcomeMsg.innerHTML = `&nbsp;&nbsp;Welcome, ${userName}!`;
         welcomeMsg.style.color = "black";
-        welcomeMsg.style.fontWeight = "600";
+        welcomeMsg.style.fontWeight = "500";
+        welcomeMsg.style.marginTop="9px";
+        welcomeMsg.style.marginRight="12px";
         signBtn.parentNode.insertBefore(welcomeMsg, signBtn);  //parentNode.insertBefore(newElement, referenceElement);
 
         // Handle Sign Out
