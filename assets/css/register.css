@@ -1,0 +1,87 @@
+/* register */
+.register-form {
+    padding: 40px 40px;
+    height: 500px;
+}
+
+.register-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 80px;
+}
+
+.register-section img {
+    width: 20%;
+}
+
+.register-section form {
+    width: 26%;
+}
+
+.register-form label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.register-form input {
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.register-form button {
+    background-color: rgb(167, 167, 164);
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+    background-color: rgb(132, 130, 128);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .register-form {
+        padding: 40px 40px;
+        height: 700px;
+    }
+
+    .register-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .register-section img {
+        width: 60%;
+    }
+
+    .register-section form {
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .register-section img {
+        width: 30%;
+    }
+
+    .register-section form {
+        width: 60%;
+    }
+}

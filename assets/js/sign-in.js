@@ -1,3 +1,8 @@
+// // clear localStorage every time page loads or it shows the username/use sessionstorage
+// window.addEventListener("load", function () {
+//   localStorage.clear();
+// });
+
 //sign-in validation + LocalStorage
 function validatesignForm(event) {
     event.preventDefault();
@@ -34,22 +39,35 @@ function validatesignForm(event) {
         isValid = false;
     }
 
-    //if valid, save data to localStorage & redirect to home page
-    if (isValid) {
-        localStorage.setItem("userName", name);
-        localStorage.setItem("userEmail", email);
-        localStorage.setItem("userPassword", password);
+     if (!isValid) return;
+
+    //check if registered user exists
+    const registeredUser = JSON.parse(localStorage.getItem("registeredUser"));
+    if (!registeredUser) {
+        alert("No registered user found. Please register first!");
+        nameInput.value = "";
+        emailInput.value = "";
+        passwordInput.value = "";
+        return;
+    }
+
+    // validate login credentials
+    if (
+        name === registeredUser.name &&
+        email === registeredUser.email &&
+        password === registeredUser.password
+    ) {
+        localStorage.setItem("userName", registeredUser.name);
+        localStorage.setItem("userEmail", registeredUser.email);
+        localStorage.setItem("userPassword" ,registeredUser.password);
         localStorage.setItem("isLoggedIn", "true");
 
         alert("Sign-in successfully!");
         window.location.href = "index.html";
+    } else {
+        alert("Invalid credentials! Please check email or password.");
     }
 }
-
-// clear localStorage every time page loads or it shows the username/use sessionstorage
-// window.addEventListener("load", function () {
-//   localStorage.clear();
-// });
 
 //home page changes are,
 document.addEventListener("DOMContentLoaded", function () {
@@ -72,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         welcomeMsg.style.marginRight="12px";
         signBtn.parentNode.insertBefore(welcomeMsg, signBtn);  //parentNode.insertBefore(newElement, referenceElement);
 
-        // Handle Sign Out
+        // handle Sign Out
         signBtn.addEventListener("click", function () {
             localStorage.clear();
             alert("Signed out successfully!");
@@ -82,3 +100,4 @@ document.addEventListener("DOMContentLoaded", function () {
         signBtn.innerHTML = "Sign In";
     }
 });
+
