@@ -1,7 +1,3 @@
-// // clear localStorage every time page loads or it shows the username/use sessionstorage
-// window.addEventListener("load", function () {
-//   localStorage.clear();
-// });
 
 //sign-in validation + LocalStorage
 function validatesignForm(event) {
@@ -45,9 +41,7 @@ function validatesignForm(event) {
     const registeredUser = JSON.parse(localStorage.getItem("registeredUser"));
     if (!registeredUser) {
         alert("No registered user found. Please register first!");
-        nameInput.value = "";
-        emailInput.value = "";
-        passwordInput.value = "";
+        document.getElementById("signIn-form").reset();
         return;
     }
 
@@ -61,7 +55,6 @@ function validatesignForm(event) {
         localStorage.setItem("userEmail", registeredUser.email);
         localStorage.setItem("userPassword" ,registeredUser.password);
         localStorage.setItem("isLoggedIn", "true");
-
         alert("Sign-in successfully!");
         window.location.href = "index.html";
     } else {

@@ -1,3 +1,9 @@
+// // clear localStorage every time page loads or it shows the username/use sessionstorage
+// window.addEventListener("load", function () {
+//   localStorage.clear();
+// });
+
+
 // signin page redirect
 // document.getElementById("signBtn").addEventListener("click", function () {
 //             window.location.href = "sign-in.html";
