@@ -65,18 +65,18 @@
             Sign In</h2>
         <div class="signInform-section">
             <img src="./assets/images/lotus-flower-icon.png" alt="">
-            <form id="signIn-form" onsubmit="return validatesignForm(event)"
+            <form id="signIn-form" onsubmit="return validatesignForm(event)" autocomplete="off"
                 style="display: flex;flex-direction: column;gap: 8px;">
                 <label>Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter Your Name">
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" autocomplete="new-name">
                 <span class="error" id="nameError"></span>
 
                 <label>Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter Your Email Address">
+                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" autocomplete="new-email">
                 <span class="error" id="emailError"></span>
 
                 <label>Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter Password">
+                <input type="password" id="password" name="password" placeholder="Enter Password" autocomplete="new-password">
                 <span class="error" id="passwordError"></span>
 
                 <button type="submit">Submit</button>
