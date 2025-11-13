@@ -28,7 +28,63 @@
 
 .navbar-brand {
     margin-left: 40px;
+    display: flex;
+    align-items: start;
 }
+.navbar-brand h1{
+    margin-top: 8px;
+    font-weight: 540;
+}
+@media (max-width: 480px) {
+    .custom-navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 0; 
+        padding-left: 0;
+    }
+
+    .navbar-brand img {
+        margin-left: 0; 
+        transform: translateY(-10%);
+        margin-right: 6px;
+    }
+
+    .navbar-brand h1 {
+        font-weight: 540;
+    }
+
+    .navbar-toggler {
+        margin-right: 12px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .custom-navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 0; 
+        padding-left: 0;
+    }
+    .navbar-brand img { 
+        margin-left: 0; 
+        transform: translateY(-10%);
+        margin-right: 6px;
+    }
+}
+
 
 .navbar-nav .nav-link,
 .navbar-nav .nav-link.active {
