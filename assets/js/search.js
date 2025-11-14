@@ -31,19 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const suggestionBox = document.querySelector(".search-suggestions");
 
     const pages = [
-        { name: "about", url: "about.html" },
-        { name: "classes", url: "classes.html" },
-        { name: "gallery", url: "gallery.html" },
-        { name: "faq", url: "faq.html" },
-        { name: "contact", url: "contact.html" },
-        
-
-        //  { name: "power yoga", url: "classes.html#power" },
-        // { name: "yoga for pregnant", url: "classes.html#pregnant" },
-        // { name: "yoga for beginners", url: "classes.html#beginners" },
-        // { name: "meditation & mindfulness", url: "classes.html#meditation" },
-        // { name: "flexibility & balance yoga", url: "classes.html#flexibility" },
-        // { name: "group lessons", url: "classes.html#group" }
+        { name: "events", url:"index.html#events"},
+        { name: "review", url:"index.html#review"},
+        { name: "trainers", url:"about.html#trainers"},
+        { name: "group-lessons", url:"classes.html#group-lessons"},
+        { name: "for-beginners", url:"classes.html#for-beginners"},
+        { name: "for-pregnant", url:"classes.html#for-pregnant"},
+        { name: "meditation", url:"classes.html#meditation"},
+        { name: "flexibility", url:"classes.html#flexibility"},
+        { name: "power-yoga", url:"classes.html#power-yoga"}
     ];
 
     // creating an element classnamed as "suggest-item"
