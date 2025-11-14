@@ -3,7 +3,7 @@ const counters = document.querySelectorAll('.count');
 
         function startCounting() {
             counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
+                const target = +counter.getAttribute('data-target');   // + --> convert string to number
                 const duration = 1000; 
                 const step = target / (duration / 30);
                 let count = 0;
@@ -21,7 +21,7 @@ const counters = document.querySelectorAll('.count');
 
         window.addEventListener('scroll', () => {
             const section = document.querySelector('.success-metrics');
-            const sectionTop = section.getBoundingClientRect().top;
+            const sectionTop = section.getBoundingClientRect().top;      //measures how far the section is from the top of the screen
             if (sectionTop < window.innerHeight - 100 && !started) {
                 startCounting();
                 started = true;

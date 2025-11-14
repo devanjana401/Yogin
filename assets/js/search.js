@@ -1,28 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     const searchForm = document.querySelector(".search-form");
-//     const searchInput = document.querySelector(".search-input");
-
-//     if (searchForm && searchInput) {
-//         searchForm.addEventListener("submit", function (e) {
-//             e.preventDefault();
-//             const query = searchInput.value.trim().toLowerCase();
-
-//             if (query === "class" || query === "classes") {
-//                 window.location.href = "classes.html";
-//             } else if (query === "about") {
-//                 window.location.href = "about.html";
-//             } else if (query === "contact") {
-//                 window.location.href = "contact.html";
-//             } else if (query === "gallery") {
-//                 window.location.href = "gallery.html";
-//             } else {
-//                 alert("No results found for '" + query + "'");
-//             }
-//         });
-//     }
-// });
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const searchForm = document.querySelector(".search-form");
     const searchInput = document.querySelector(".search-input");
@@ -54,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // hiding that suggestions
-    document.addEventListener("click", (e) => {
-        if (!searchForm.contains(e.target)) {
+    document.addEventListener("click", (event) => {
+        if (!searchForm.contains(event.target)) {
             suggestionBox.style.display = "none";
         }
     });
 
-    //live filterinng during typing
+    //live filtering during typing
     searchInput.addEventListener("input", () => {
         const q = searchInput.value.toLowerCase().trim();
 
@@ -76,16 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // when click on a suggestion ,need to go to that section
-    suggestionBox.addEventListener("click", (e) => {
-        if (e.target.classList.contains("suggest-item")) {
-            const page = pages.find(p => p.name === e.target.innerText.toLowerCase());
+    suggestionBox.addEventListener("click", (event) => {
+        if (event.target.classList.contains("suggest-item")) {
+            const page = pages.find(p => p.name === event.target.innerText.toLowerCase());
             if (page) window.location.href = page.url;
         }
     });
 
     // this is for manually typing the suggestions
-    searchForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    searchForm.addEventListener("submit", function (event) {
+        event.preventDefault();
         const query = searchInput.value.trim().toLowerCase();
 
         const match = pages.find(p => p.name === query);

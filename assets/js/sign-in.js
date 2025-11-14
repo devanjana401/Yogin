@@ -1,27 +1,18 @@
-
-//sign-in validation + LocalStorage
+//sign-in validation & localstorage
 function validatesignForm(event) {
     event.preventDefault();
 
     //clear previous errors
-    document.getElementById("nameError").innerText = "";
     document.getElementById("emailError").innerText = "";
     document.getElementById("passwordError").innerText = "";
 
     let isValid = true;
 
-    //get form values
-    const name = document.getElementById("name").value.trim();
+    //get field values
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
     //validate each field
-    const namePattern = /^[a-zA-Z\s'-]+$/;
-    if (name === "" || !namePattern.test(name)) {
-        document.getElementById("nameError").innerText = "Enter a valid name (letters only)!";
-        isValid = false;
-    }
-
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email === "" || !emailPattern.test(email)) {
         document.getElementById("emailError").innerText = "Enter a valid email!";
@@ -47,7 +38,6 @@ function validatesignForm(event) {
 
     // validate login credentials
     if (
-        name === registeredUser.name &&
         email === registeredUser.email &&
         password === registeredUser.password
     ) {
@@ -83,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         welcomeMsg.style.marginRight="12px";
         signBtn.parentNode.insertBefore(welcomeMsg, signBtn);  //parentNode.insertBefore(newElement, referenceElement);
 
-        // handle Sign Out
+        //Sign Out
         signBtn.addEventListener("click", function () {
             localStorage.clear();
             alert("Signed out successfully!");

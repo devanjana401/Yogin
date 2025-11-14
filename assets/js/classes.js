@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-// card-hover
+// class-card-hover
 document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("mouseenter", () => {
     const text = card.querySelector(".text");

@@ -3,7 +3,7 @@
     emailjs.init("rfuFFYZhu0_J3KVCq");
 })();
 
-// validation + emailjs
+// validation & emailjs
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
 

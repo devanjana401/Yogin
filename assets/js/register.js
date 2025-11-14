@@ -1,5 +1,5 @@
-document.getElementById("registerForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+document.getElementById("registerForm").addEventListener("submit", function (event) {
+    event.preventDefault();
 
     const name = document.getElementById("regName").value.trim();
     const email = document.getElementById("regEmail").value.trim();
@@ -9,7 +9,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
         alert("Please fill all fields before registering.");
         return;
     }
-    // save user details into LocalStorage
+    // save user details into localstorage
     const userData = {
         name: name,
         email: email,
