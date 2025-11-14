@@ -228,12 +228,14 @@ body {
     top: 100%;               
     left: 0;              
     background: white;
-    border: 1px solid #ccc;
+    border: 1px solid #ded1d1;
     border-radius: 10px;
-    width: 100%;            
+    width: 100%;         
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     z-index: 999;
     display: none;
+    height: 160px;  
+    overflow-y: auto; 
 }
 
 .search-suggestions .suggest-item {
@@ -243,9 +245,8 @@ body {
 }
 
 .search-suggestions .suggest-item:hover {
-    background: #f2f2f2;
+    background: white;
 }
-
 
 
 /* footer */
