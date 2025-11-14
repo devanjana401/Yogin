@@ -48,11 +48,11 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     if (isValid) {
         emailjs.sendForm("service_uye8cf2", "template_jitw5wm", this)
             .then(function () {
-                alert("✅ Message sent successfully!");
+                alert("Message sent successfully!");
                 document.getElementById("contact-form").reset();
             })
             .catch(function (error) {
-                alert("❌ Failed to send message: " + JSON.stringify(error));
+                alert("Failed to send message: " + JSON.stringify(error));
             });
     }
 });
