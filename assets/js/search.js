@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         suggestionBox.style.display = "block";
     });
 
-    // when click on a suggestion ,need to go to that section
+    // when click on a suggestion ,need to go that section
     suggestionBox.addEventListener("click", (event) => {
         if (event.target.classList.contains("suggest-item")) {
             const page = pages.find(p => p.name === event.target.innerText.toLowerCase());

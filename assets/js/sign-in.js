@@ -48,7 +48,7 @@ function validatesignForm(event) {
         alert("Sign-in successfully!");
         window.location.href = "index.html";
     } else {
-        alert("Invalid credentials! Please check email or password.");
+        alert("Invalid credentials! please check email or password.");
     }
 }
 
